@@ -37,14 +37,17 @@
 
 1. *access-control-allow-credentials:* 表示是否发送 cookies, 如果设置 true 的同时，ajax 请求设置 withCredentials = true, 浏览器的 cookies 将会被发送到目标服务器
 
-2. *access-control-allow-origin:* 目标服务器允许发起请求的源列表, 或者 `*` 来允许任何源发起请求。如果 *access-control-allow-credentials* 已经设置了，那么不允许设置 *access-control-allow-origin* 为 `*`, 否则浏览器会拒绝该请求
+2. *access-control-allow-origin:* 目标服务器允许发起请求的源列表, 或者 '\*' 来允许任何源发起请求。如果 *access-control-allow-credentials* 已经设置了，那么不允许设置 *access-control-allow-origin* 为 '\*', 否则浏览器会拒绝该请求
 
 3. *access-control-allow-method:* 允许请求的 HTTP 方法列表 - POST, PUT等
 
-之所以 access-control-allow-origin 不能被设置为 `*` 当 access-control-allow-credentials 被设置的时候，是为了保护开发人员走捷径，只是简单的设置 `*`, 然后过了一段时间时间，把这些设置都忘记了 - 所以不能设置 `*` 的行为强制开发人员思考你提供的 API 将会如何被消费。
+之所以 access-control-allow-origin 不能被设置为 '\*' 当 access-control-allow-credentials 被设置的时候，是为了防止开发人员走捷径，只是简单的设置 '\*', 然后过了一段时间时间，把这些设置都忘记了 - 所以不能设置 '\*' 的行为是为了强制开发人员思考你提供的 API 将会如何被消费。
 
 CORS 通常是一种代码味道 - 举个例子，CORS 的一种常用用法是允许多个站点获取通过一个 API, 就像 *mybankpersonal.com* 和 *mybankbusiness.com* 需要同时请求 *mybank.com* - 在这个例子中, 如果 web 站点服务使用相同的域名(mybank.com), CORS 可以被完全避免对于访问 API 网关, 无需任何 CORS 头需要被设置，并且浏览器可以使用完全的同源策略和提供最高级的安全。总而言之, CORS 仅仅为有选择性的减少安全而服务，而不是增加它的安全。
 
 换言之，使用 CORS 是不可避免的, 如果你为使用浏览器请求的第三方提供 API
 
 当然, CORS 对于浏览器之外的请求是不想干的, 例如: 使用 Curl 或者 使用 服务端到服务端的通信。
+
+## 参考
+[文章源地址](https://blog.vnaik.com/posts/web-attacks.html)
