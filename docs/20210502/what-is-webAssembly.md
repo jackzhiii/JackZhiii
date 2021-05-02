@@ -8,3 +8,6 @@ WebAssembly 对于 web 平台有着巨大的影响 - 它提供了一种运行代
 WebAssembly 旨在补充(提供接近原生的性能) JavaScript 并与之一起运行 - 使用 WebAssembly 的 JavaScript 的 APIS， 你可以在 JavaScript 应用程序中共享 WebAssembly 模块，同时在两者之间共享功能。这允许你能够在同一个 web 应用程序中既能利用 WebAssembly 的性能和强大，也能够利用 JavaScript 的开发经验和灵活性，甚至在你根本不需要知道 WebAssembly 的代码。
 
 更好的是，在 **W3C** 和 **Community Group**  以及主流浏览器厂商的参与下，WebAssembly 正在发展为一种 web 标准。
+
+# 参考
+[原文地址](https://developer.mozilla.org/en-US/docs/WebAssembly)
