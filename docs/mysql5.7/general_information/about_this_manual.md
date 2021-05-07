@@ -15,4 +15,4 @@
 # 印刷和语法规范
 
 这个参考手册使用一系列的印刷约定：
-![印刷约定](../../../images/typographical_convention.png)
+![印刷约定](https://github.com/jackzhiii/JackZhiii/blob/main/images/typographical_convention.png)
