@@ -16,9 +16,9 @@ func (s *IntSet) Has(x int) bool {
 }
 
 // Add 添加非负数 x 到集合中
-func (s *IntSet) Add(x int) {
+func (s *IntSet) Add(x uint) {
 	word, bit := x/64, uint(x%64)
-	for word >= len(s.words) {
+	for int(word) >= len(s.words) {
 		s.words = append(s.words, 0)
 	}
 
@@ -34,6 +34,41 @@ func (s *IntSet) UnionWith(t *IntSet) {
 			s.words = append(s.words, tword)
 		}
 	}
+}
+
+// InterWith 将会对获取存在 s 和 t 的交集
+func (s *IntSet) InterWith(t *IntSet) *IntSet {
+	var result IntSet
+
+	for i, tword := range t.words {
+		if i < len(s.words) {
+			result.words = append(result.words, s.words[i]^tword)
+		} else {
+			result.words = append(result.words, tword)
+		}
+	}
+
+	if len(s.words) > len(t.words) {
+		result.words = append(result.words, s.words[len(t.words):]...)
+	}
+
+	return &result
+}
+
+// DiffWith 获取 s 对 t 对差集
+func (s *IntSet) DiffWith(t *IntSet) *IntSet {
+	var result IntSet
+	for i, tword := range t.words {
+		if i < len(s.words) {
+			result.words = append(result.words, s.words[i] & ^(^(s.words[i] ^ tword)))
+		}
+	}
+
+	if len(s.words) > len(t.words) {
+		result.words = append(result.words, s.words[len(t.words):]...)
+	}
+
+	return &result
 }
 
 func (s *IntSet) Len() int {
@@ -98,5 +133,11 @@ func (s *IntSet) Copy() *IntSet {
 	copy(dstIntSet.words, s.words)
 
 	return &dstIntSet
+}
+
+func (s *IntSet) AddAll(nums ...uint) {
+	for _, num := range nums {
+		s.Add(num)
+	}
 }
 ```
