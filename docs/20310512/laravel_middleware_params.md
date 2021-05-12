@@ -4,7 +4,7 @@
 # 如何传递参数？
 ```php
     protected $routeMiddleware = [
-        'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
+        'auth' => Illuminate\Auth\Middleware\Authenticate::class,
         ...
     ];
 ```
