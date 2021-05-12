@@ -21,4 +21,4 @@
 1. [简述 CSRF, CORS 以及 HTTP Security headers](20210423/web-attacks.md)
 
 ## 读书记录
-1. **Go 程序设计语言** [60%]
+1. **Go 程序设计语言** [75%]
