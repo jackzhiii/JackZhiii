@@ -1,3 +1,8 @@
+## 2021-5-20
+1. [分析 Redis SDS源码, 对比2.8和5.0版本, 详解SDS代码变得这么难懂](20310520/redis_sds_source_analyse.md)
+
+2. [TCP/IP 协议入门](20310520/introduction_tcp_ip_protocol.md)
+
 ## 2021-5-12
 1. [Laravel/Lumen 中间件如何传递参数源码解析](20310512/laravel_middleware_params.md)
 
@@ -21,4 +26,6 @@
 1. [简述 CSRF, CORS 以及 HTTP Security headers](20210423/web-attacks.md)
 
 ## 读书记录
-1. **Go 程序设计语言** [75%]
+1. **Go 程序设计语言** [90%]
+
+2. **Concurrency in Go** [40%] 
