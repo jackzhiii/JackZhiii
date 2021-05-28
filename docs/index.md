@@ -1,6 +1,8 @@
 ## 2021-5-26
 1. [Docker overview 翻译](20310526/docker_overview.md)
 
+2. [什么是 Kubernetes](20310526/what_is_kubernetes.md)
+
 ## 2021-5-20
 1. [分析 Redis SDS源码, 对比2.8和5.0版本, 详解SDS代码变得这么难懂](20310520/redis_sds_source_analyse.md)
 
@@ -32,3 +34,5 @@
 1. **Go 程序设计语言** [90%]
 
 2. **Concurrency in Go** [40%] 
+
+3. **Kubernets 权威指南第二版** [1%]

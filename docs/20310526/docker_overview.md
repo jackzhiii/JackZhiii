@@ -33,7 +33,7 @@ Docker 是轻量级和快速的。它提供一个可行的，具有成本效益�
 
 ## Docker 的架构
 Docker 使用基于 client-server 的架构模式。Dokcer 的客户端和 Docker 的守护进程进行通信。Docker 的守护进程做了很多工作，如构建，运行和分发你的 Docker 容器。Docker 的客户端和守护进程可以运行在同一个系统上，或者你可以使用客户端连接远程Docker 守护进程。Docker 的客户端和守护进程使用 REST API进程通信，基于 UNIX sockets 或者 网络接口。另外一个Docker 的客户端是 Docker Compose, 可以让你在由一系列容器组成的应用上工作。
-![](../../images/docker_architecture.svg)
+![Docker 架构](https://github.com/jackzhiii/JackZhiii/blob/main/images/docker_architecture.svg)
 
 ## Docker 守护进程
 Docker 守护进程(dockerd) 用于监听 Docker API 的请求并且管理 Dokcer 的对象，例如，镜像，容器，网络和存储卷。守护进程同样可以和其他守护进程进行通信来管理 Docker 的服务。
