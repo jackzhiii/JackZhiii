@@ -1,3 +1,11 @@
+## 2021-6-1
+1. [memory-management-in-golang 翻译](20210601/memory_management_in_golang.md)
+
+## 2021-5-31
+1 [Kubernetes 对象管理](20310531/k8s_object_managment.md)
+
+2 [TCMalloc 学习和优秀文章](20310531/tcmalloc.md)
+
 ## 2021-5-28
 1. [Kubernetes 的组件](20310528/k8s_components.md)
 
@@ -6,6 +14,8 @@
 3. [Kubernetes API](20310528/k8s_kubernetes_api.md)
 
 4. [使用 kubernetes 对象](20310528/working_with_k8s_object.md)
+
+5. [TCMalloc: 线程缓存 Malloc](20310528/thread_cacheing_malloc.md)
 
 ## 2021-5-26
 1. [Docker overview 翻译](20310526/docker_overview.md)
